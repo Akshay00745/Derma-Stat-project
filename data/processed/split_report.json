@@ -1,0 +1,58 @@
+{
+  "random_seed": 42,
+  "total_records": 10015,
+  "total_unique_lesions": 7470,
+  "splits": {
+    "train": {
+      "images": 7030,
+      "images_percentage": 70.19,
+      "lesions": 5230,
+      "lesions_percentage": 70.01,
+      "class_counts": {
+        "bkl": 769,
+        "nv": 4709,
+        "df": 85,
+        "mel": 791,
+        "vasc": 100,
+        "bcc": 347,
+        "akiec": 229
+      }
+    },
+    "val": {
+      "images": 1491,
+      "images_percentage": 14.89,
+      "lesions": 1120,
+      "lesions_percentage": 14.99,
+      "class_counts": {
+        "bkl": 170,
+        "df": 16,
+        "mel": 175,
+        "vasc": 22,
+        "bcc": 78,
+        "nv": 978,
+        "akiec": 52
+      }
+    },
+    "test": {
+      "images": 1494,
+      "images_percentage": 14.92,
+      "lesions": 1120,
+      "lesions_percentage": 14.99,
+      "class_counts": {
+        "bkl": 160,
+        "df": 14,
+        "mel": 147,
+        "vasc": 20,
+        "bcc": 89,
+        "nv": 1018,
+        "akiec": 46
+      }
+    }
+  },
+  "leakage_verification": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "data_leakage_detected": false
+  }
+}

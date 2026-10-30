@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Data & Archives
+data/raw/*.zip
+data/raw/HAM10000_images_part_1/
+data/raw/HAM10000_images_part_2/
+
+# Model Checkpoints (large binary weights)
+checkpoints/*.pth
+checkpoints/*.pt
+
+# OS / Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

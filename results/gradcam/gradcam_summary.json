@@ -1,0 +1,42 @@
+[
+  {
+    "image_id": "ISIC_0025033",
+    "true_diagnosis": "bkl",
+    "predicted_diagnosis": "nv",
+    "confidence": 0.4321,
+    "output_file": "gradcam_ISIC_0025033_bkl.png",
+    "heatmap_active_ratio": 0.0421
+  },
+  {
+    "image_id": "ISIC_0031177",
+    "true_diagnosis": "mel",
+    "predicted_diagnosis": "mel",
+    "confidence": 0.9565,
+    "output_file": "gradcam_ISIC_0031177_mel.png",
+    "heatmap_active_ratio": 0.1818
+  },
+  {
+    "image_id": "ISIC_0034093",
+    "true_diagnosis": "bcc",
+    "predicted_diagnosis": "bcc",
+    "confidence": 0.4896,
+    "output_file": "gradcam_ISIC_0034093_bcc.png",
+    "heatmap_active_ratio": 0.1128
+  },
+  {
+    "image_id": "ISIC_0031588",
+    "true_diagnosis": "nv",
+    "predicted_diagnosis": "nv",
+    "confidence": 0.997,
+    "output_file": "gradcam_ISIC_0031588_nv.png",
+    "heatmap_active_ratio": 0.1374
+  },
+  {
+    "image_id": "ISIC_0029915",
+    "true_diagnosis": "akiec",
+    "predicted_diagnosis": "df",
+    "confidence": 0.9898,
+    "output_file": "gradcam_ISIC_0029915_akiec.png",
+    "heatmap_active_ratio": 0.0715
+  }
+]

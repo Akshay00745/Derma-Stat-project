@@ -1,0 +1,136 @@
+{
+  "test_dataset": "HAM10000 (reserved test split)",
+  "total_test_samples": 1494,
+  "overall_metrics": {
+    "test_accuracy": 0.7604,
+    "test_accuracy_percentage": 76.04,
+    "macro_f1": 0.6944,
+    "macro_f1_percentage": 69.44,
+    "weighted_f1": 0.7825,
+    "weighted_f1_percentage": 78.25,
+    "macro_precision": 0.661,
+    "macro_precision_percentage": 66.1,
+    "weighted_precision": 0.8394,
+    "weighted_precision_percentage": 83.94,
+    "macro_recall": 0.7707,
+    "macro_recall_percentage": 77.07,
+    "weighted_recall": 0.7604,
+    "weighted_recall_percentage": 76.04
+  },
+  "per_class_metrics": {
+    "akiec": {
+      "name": "Actinic Keratoses and Intraepithelial Carcinoma",
+      "precision": 0.7143,
+      "recall": 0.5435,
+      "f1_score": 0.6173,
+      "support": 46
+    },
+    "bcc": {
+      "name": "Basal Cell Carcinoma",
+      "precision": 0.6574,
+      "recall": 0.7978,
+      "f1_score": 0.7208,
+      "support": 89
+    },
+    "bkl": {
+      "name": "Benign Keratosis-like Lesions",
+      "precision": 0.5737,
+      "recall": 0.6813,
+      "f1_score": 0.6229,
+      "support": 160
+    },
+    "df": {
+      "name": "Dermatofibroma",
+      "precision": 0.5714,
+      "recall": 0.8571,
+      "f1_score": 0.6857,
+      "support": 14
+    },
+    "mel": {
+      "name": "Melanoma",
+      "precision": 0.375,
+      "recall": 0.7959,
+      "f1_score": 0.5098,
+      "support": 147
+    },
+    "nv": {
+      "name": "Melanocytic Nevi",
+      "precision": 0.9751,
+      "recall": 0.7692,
+      "f1_score": 0.86,
+      "support": 1018
+    },
+    "vasc": {
+      "name": "Vascular Lesions",
+      "precision": 0.76,
+      "recall": 0.95,
+      "f1_score": 0.8444,
+      "support": 20
+    }
+  },
+  "confusion_matrix": [
+    [
+      25,
+      3,
+      9,
+      1,
+      8,
+      0,
+      0
+    ],
+    [
+      4,
+      71,
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    [
+      4,
+      11,
+      109,
+      3,
+      24,
+      9,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      12,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      7,
+      15,
+      0,
+      117,
+      8,
+      0
+    ],
+    [
+      1,
+      14,
+      53,
+      2,
+      160,
+      783,
+      5
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      19
+    ]
+  ]
+}

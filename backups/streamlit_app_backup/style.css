@@ -1,0 +1,540 @@
+/* ==========================================================================
+   Dermastat Air Vision - Professional Medical AI Dashboard Stylesheet
+   Theme: Light, minimal, modern medical aesthetic matching UI Reference
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-blue: #2563eb;
+  --primary-blue-hover: #1d4ed8;
+  --primary-blue-light: #eff6ff;
+  --primary-blue-border: #bfdbfe;
+  
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fcfdfe;
+  --bg-muted: #f1f5f9;
+  
+  --border-light: #e2e8f0;
+  --border-subtle: #edf2f7;
+  
+  --text-main: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  
+  --success-green: #10b981;
+  --success-bg: #ecfdf5;
+  --success-border: #a7f3d0;
+  --success-text: #065f46;
+  
+  --warning-amber: #f59e0b;
+  --warning-bg: #fffbeb;
+  --warning-border: #fde68a;
+  --warning-text: #92400e;
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 2px 10px -2px rgba(15, 23, 42, 0.05), 0 1px 3px -1px rgba(15, 23, 42, 0.03);
+  --shadow-hover: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+}
+
+/* Global resets & typography */
+html, body, [class*="css"] {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  color: var(--text-body);
+  background-color: var(--bg-page) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Clean Header/Footer Hiding */
+#MainMenu { visibility: hidden !important; }
+footer { visibility: hidden !important; }
+header { visibility: hidden !important; }
+div[data-testid="stDecoration"] { display: none !important; }
+div[data-testid="stToolbar"] { display: none !important; }
+
+/* Main app padding */
+.main .block-container {
+  padding-top: 1.5rem !important;
+  padding-bottom: 3rem !important;
+  max-width: 1280px !important;
+}
+
+/* Sidebar Custom Styling */
+section[data-testid="stSidebar"] {
+  background-color: #ffffff !important;
+  border-right: 1px solid var(--border-light) !important;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.02) !important;
+}
+
+section[data-testid="stSidebar"] .block-container {
+  padding-top: 1.5rem !important;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+}
+
+/* App Logo in Sidebar & Topbar */
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0 1.25rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 1.25rem;
+}
+
+.brand-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.brand-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+/* Navigation Item Pill */
+.nav-pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-body);
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  margin-bottom: 0.35rem;
+  cursor: pointer;
+}
+
+.nav-pill-btn:hover {
+  background-color: var(--bg-muted);
+  color: var(--primary-blue);
+}
+
+.nav-pill-btn.active {
+  background-color: var(--primary-blue-light);
+  color: var(--primary-blue);
+  border-color: var(--primary-blue-border);
+}
+
+/* Bottom Disclaimer Pill in Sidebar */
+.sidebar-disclaimer-box {
+  background: var(--bg-muted);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.sidebar-disclaimer-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 0.35rem;
+}
+
+/* Cards & Surfaces */
+.air-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s ease;
+  margin-bottom: 1.25rem;
+}
+
+.air-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.air-card-sm {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Hero Section (Landing Page) */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 3rem 1rem 2.5rem 1rem;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-main);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+.hero-img-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-circle-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 6px solid #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-circle-ring {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, rgba(37, 99, 235, 0.01) 70%, transparent 100%);
+  z-index: 1;
+}
+
+.hero-badge-floating {
+  position: absolute;
+  bottom: 10px;
+  right: -15px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  z-index: 3;
+}
+
+/* Feature Pills Row */
+.feature-pill-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  height: 100%;
+}
+
+.feature-pill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--primary-blue-border);
+}
+
+.feature-pill-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-blue-light);
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-pill-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+/* 7 Categories Grid Item */
+.category-item-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 0.75rem 1rem 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.category-item-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-card);
+}
+
+.category-thumb-circle {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--bg-muted);
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.category-code {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.category-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+/* Upload Dropzone Container */
+.upload-dropzone {
+  border: 2px dashed #93c5fd;
+  background: #fbfdff;
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-dropzone:hover {
+  background: #f0f7ff;
+  border-color: var(--primary-blue);
+}
+
+.upload-cloud-icon {
+  width: 56px;
+  height: 56px;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.upload-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.upload-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* Status Pill Badges */
+.status-pill-success {
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  color: var(--success-text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.status-pill-warning {
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  color: var(--warning-text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Confidence Bar Rows */
+.confidence-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.conf-label {
+  width: 70px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.conf-bar-track {
+  flex-grow: 1;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.conf-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease-out;
+}
+
+.conf-value {
+  width: 55px;
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Medical Disclaimer Banner */
+.disclaimer-card {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #92400e;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin-top: 1.5rem;
+}
+
+/* Streamlit Button Overrides */
+div.stButton > button:first-child {
+  border-radius: var(--radius-md) !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  padding: 0.65rem 1.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+div.stButton > button[kind="primary"] {
+  background-color: var(--primary-blue) !important;
+  border-color: var(--primary-blue) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25) !important;
+}
+
+div.stButton > button[kind="primary"]:hover {
+  background-color: var(--primary-blue-hover) !important;
+  border-color: var(--primary-blue-hover) !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35) !important;
+}
+
+div.stButton > button[kind="secondary"] {
+  background-color: #ffffff !important;
+  border: 1px solid var(--border-light) !important;
+  color: var(--text-main) !important;
+}
+
+div.stButton > button[kind="secondary"]:hover {
+  background-color: var(--bg-muted) !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Streamlit Native Radio as Sidebar Navigation */
+div[data-testid="stSidebar"] div.stRadio > div[role="radiogroup"] {
+  gap: 0.35rem !important;
+}
+
+div[data-testid="stSidebar"] div.stRadio > div[role="radiogroup"] > label {
+  background: transparent !important;
+  border-radius: var(--radius-md) !important;
+  padding: 0.65rem 0.85rem !important;
+  border: 1px solid transparent !important;
+  font-weight: 600 !important;
+  font-size: 0.92rem !important;
+  color: var(--text-body) !important;
+  transition: all 0.15s ease !important;
+}
+
+div[data-testid="stSidebar"] div.stRadio > div[role="radiogroup"] > label:hover {
+  background-color: var(--bg-muted) !important;
+  color: var(--primary-blue) !important;
+}
+
+div[data-testid="stSidebar"] div.stRadio > div[role="radiogroup"] > label[data-checked="true"] {
+  background-color: var(--primary-blue-light) !important;
+  color: var(--primary-blue) !important;
+  border-color: var(--primary-blue-border) !important;
+}
+
+/* Hide Radio Circles in Sidebar */
+div[data-testid="stSidebar"] div.stRadio input[type="radio"] {
+  display: none !important;
+}
+div[data-testid="stSidebar"] div.stRadio div[data-testid="stMarkdownContainer"] {
+  width: 100% !important;
+}
+
+/* Streamlit Expander (Accordions in Help) */
+div[data-testid="stExpander"] {
+  background: #ffffff !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-md) !important;
+  margin-bottom: 0.75rem !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+div[data-testid="stExpander"] summary {
+  font-weight: 700 !important;
+  color: var(--text-main) !important;
+  font-size: 0.95rem !important;
+  padding: 0.85rem 1.25rem !important;
+}

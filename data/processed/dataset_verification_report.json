@@ -1,0 +1,69 @@
+{
+  "verification_status": "PASSED",
+  "dataset_name": "HAM10000",
+  "total_metadata_records": 10015,
+  "unique_metadata_image_ids": 10015,
+  "duplicate_image_ids_in_csv": 0,
+  "total_extracted_files": 10024,
+  "valid_images_indexed": 10015,
+  "missing_images_on_disk": 0,
+  "extra_images_on_disk": 0,
+  "duplicate_suffix_artifacts": 9,
+  "unique_lesions": 7470,
+  "single_image_lesions": 5514,
+  "multi_image_lesions": 1956,
+  "max_images_per_lesion": 6,
+  "class_distribution": {
+    "nv": {
+      "name": "Melanocytic nevi",
+      "count": 6705,
+      "percentage": 66.95
+    },
+    "mel": {
+      "name": "Melanoma",
+      "count": 1113,
+      "percentage": 11.11
+    },
+    "bkl": {
+      "name": "Benign keratosis-like lesions",
+      "count": 1099,
+      "percentage": 10.97
+    },
+    "bcc": {
+      "name": "Basal cell carcinoma",
+      "count": 514,
+      "percentage": 5.13
+    },
+    "akiec": {
+      "name": "Actinic keratoses and intraepithelial carcinoma",
+      "count": 327,
+      "percentage": 3.27
+    },
+    "vasc": {
+      "name": "Vascular lesions",
+      "count": 142,
+      "percentage": 1.42
+    },
+    "df": {
+      "name": "Dermatofibroma",
+      "count": 115,
+      "percentage": 1.15
+    }
+  },
+  "image_dimensions": {
+    "600x450": 10015
+  },
+  "image_channels": {
+    "3": 10015
+  },
+  "corrupted_images_count": 0,
+  "metadata_missing_counts": {
+    "lesion_id": 0,
+    "image_id": 0,
+    "dx": 0,
+    "dx_type": 0,
+    "age": 57,
+    "sex": 57,
+    "localization": 234
+  }
+}

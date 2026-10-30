@@ -1,0 +1,9 @@
+{
+  "calibrated_threshold": 0.8315,
+  "validation_samples": 1491,
+  "correct_samples": 1170,
+  "incorrect_samples": 321,
+  "mean_confidence_correct": 0.8593,
+  "mean_confidence_incorrect": 0.6826,
+  "calibration_split": "validation_only"
+}

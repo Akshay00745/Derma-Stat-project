@@ -1,0 +1,19 @@
+{
+  "status": "VERIFIED",
+  "calibrated_threshold": 0.8315,
+  "validation_samples": 1491,
+  "mean_confidence_correct": 0.8593,
+  "mean_confidence_incorrect": 0.6826,
+  "reliable_subset": {
+    "count": 863,
+    "coverage_percentage": 57.88,
+    "selective_accuracy": 90.61
+  },
+  "uncertain_subset": {
+    "count": 628,
+    "filtered_percentage": 42.12,
+    "accuracy_in_uncertain_zone": 61.78
+  },
+  "test_set_isolation_confirmed": true,
+  "gradcam_artifacts_count": 5
+}
